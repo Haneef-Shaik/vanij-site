@@ -1,16 +1,20 @@
+import ReactDOM from "react-dom/client";
 
-import './App.css'
-import { Button } from "@/components/ui/button"
+import { ThemeProvider } from "@/components/theme-provider";
+import UrlRoutes from "./UrlRoutes";
 
-function App() {
+import "./index.css";
 
+export default function App() {
   return (
-    <>
     <div>
-      <Button>Click me</Button>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <UrlRoutes />
+      </ThemeProvider>
     </div>
-    </>
-  )
+  );
 }
 
-export default App
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <App />
+);

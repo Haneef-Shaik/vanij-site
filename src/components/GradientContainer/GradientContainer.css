@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.bg_container{
+  background-image: url("/gradientBG.png");
+  background-size: cover;
+}
+
+@media screen and (max-width : 400px )   {
+  .bg_container{
+    overflow: hidden;
+    padding: 16px 24px;
+    background-image: url("/GradientMobile.png");
+  }
+}
