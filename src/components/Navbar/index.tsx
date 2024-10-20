@@ -82,18 +82,25 @@ export default function Header() {
                 aria-labelledby="options-menu"
               >
                 <Link
-                  to="/product1"
+                  to="/build-your-agents"
                   className="block px-4 py-2  text-gray-300 hover:bg-[#2a2a2a] hover:text-white"
                   role="menuitem"
                 >
-                  Product 1
+                  Build your Agents
                 </Link>
                 <Link
-                  to="/product2"
+                  to="/custom-llms"
                   className="block px-4 py-2  text-gray-300 hover:bg-[#2a2a2a] hover:text-white"
                   role="menuitem"
                 >
-                  Product 2
+                  Custom LLM’s
+                </Link>
+                <Link
+                  to="/our-agents"
+                  className="block px-4 py-2  text-gray-300 hover:bg-[#2a2a2a] hover:text-white"
+                  role="menuitem"
+                >
+                  Our Agents
                 </Link>
               </div>
             </div>
