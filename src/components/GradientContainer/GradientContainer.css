@@ -3,6 +3,12 @@
   background-image: url("/gradientBG.png");
   background-size: cover;
 }
+.bg_container_inverted{
+  background-size: cover;  
+  background-image: url("/gradientBG.png");
+  transform: rotate(180deg);
+}
+
 
 @media screen and (max-width : 400px )   {
   .bg_container{

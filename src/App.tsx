@@ -7,7 +7,7 @@ import "./index.css";
 
 export default function App() {
   return (
-    <div>
+    <div className="" >
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <UrlRoutes />
       </ThemeProvider>

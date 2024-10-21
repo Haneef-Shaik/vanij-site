@@ -1,14 +1,16 @@
 import React from "react";
 import "./GradientContainer.css";
 export default function GradientContainer({
+  inverted = false,
   children,
 }: {
+  inverted?: boolean;
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg_container !relative">
-      <div className="!z-10">
-        <div className="!z-40 relative grid place-items-center h-[100dvh]">
+    <div className={`${ inverted ? "bg_container_inverted" :  "bg_container"} bg-red-300 !relative !p-0 w-full !overflow-hidden `}>
+      <div className="!z-10 !p-0!m-0">
+        <div className="!z-40 relative grid place-items-center min-h-[100dvh] p-0">
           {children}
           <div
             className=" !z-0 absolute"
