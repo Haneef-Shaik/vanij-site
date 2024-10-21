@@ -46,7 +46,7 @@ export default function Header() {
           className
         )}
       >
-        <img src={MagicColorFilledIcon} alt="" className="mr-2 w-6 h-6" />
+        <img src={MagicColorFilledIcon} alt="" className="mr-2 sm:w-6 sm:h-6 h-5 w-5" />
         <span className=" font-medium">Join Waitlist</span>
       </button>
     );
@@ -58,7 +58,7 @@ export default function Header() {
 
   return (
     <header className={headerClasses}>
-      <div className="container mx-auto px-4 flex items-center justify-between max-w-7xl">
+      <div className="container mx-auto px-4 flex items-center justify-between max-w-[90rem]">
         <Link to="/" className="">
           <img src={VanijLabelLogo} alt="" className="h-10 w-auto" />
         </Link>
@@ -123,25 +123,28 @@ export default function Header() {
           </button> */}
           <JoinWaitlistButton className="hidden md:flex " />
         </nav>
-        <button
-          className="md:hidden text-white focus:outline-none"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+        <div className='flex items-center gap-5 justify-center md:hidden'>
+            <JoinWaitlistButton className="flex items-center gap-1 text-sm" />
+          <button
+            className="md:hidden text-white focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
       {/* Mobile menu */}
       {isMenuOpen && (
@@ -162,7 +165,7 @@ export default function Header() {
             <Star className="mr-2 h-4 w-4" />
             <span className=" font-medium">Join Waitlist</span>
           </button> */}
-          <JoinWaitlistButton className="flex items-center px-4 py-2 mx-4 mt-2 md:hidden" />
+          {/* <JoinWaitlistButton className="flex items-center px-4 py-2 mx-4 mt-2 md:hidden" /> */}
         </div>
       )}
     </header>
